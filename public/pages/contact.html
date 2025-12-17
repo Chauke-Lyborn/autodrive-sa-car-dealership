@@ -1,0 +1,234 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="Contact AutoDrive SA - Get in touch with our team for inquiries about our vehicles or services. Visit us in Johannesburg.">
+    <title>Contact Us - AutoDrive SA</title>
+    <link rel="stylesheet" href="../css/styles.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+</head>
+<body>
+    <!-- Navigation -->
+    <nav class="navbar">
+        <div class="container">
+            <div class="nav-content">
+                <a href="../index.html" class="logo" data-testid="link-logo">AUTO<span>DRIVE</span> SA</a>
+                <ul class="nav-menu" id="navMenu" data-testid="nav-menu">
+                    <li><a href="../index.html" data-testid="link-home">Home</a></li>
+                    <li><a href="about.html" data-testid="link-about">About Us</a></li>
+                    <li><a href="contact.html" class="active" data-testid="link-contact">Contact</a></li>
+                </ul>
+                <div class="hamburger" id="hamburger" data-testid="button-hamburger">
+                    <span></span>
+                    <span></span>
+                    <span></span>
+                </div>
+            </div>
+        </div>
+    </nav>
+
+    <!-- Contact Intro Section -->
+    <section class="contact-intro">
+        <div class="container">
+            <h1 data-testid="text-contact-title">Get In Touch</h1>
+            <p data-testid="text-contact-subtitle" style="font-size: 1.3rem; color: var(--light-silver); max-width: 700px; margin: 1.5rem auto 0;">
+                Have questions or ready to find your perfect car? Our team is here to help you every step of the way.
+            </p>
+        </div>
+    </section>
+
+    <!-- Contact Form and Map Section -->
+    <section class="featured-cars">
+        <div class="container">
+            <div class="contact-content" data-testid="contact-content">
+                <!-- Contact Form -->
+                <div class="contact-form" data-testid="contact-form">
+                    <h2 data-testid="text-form-title" style="margin-bottom: 1.5rem; color: var(--primary-red); font-family: 'Montserrat', sans-serif;">Send Us an Inquiry</h2>
+                    
+                    <form id="contactForm" data-testid="form-contact">
+                        <div class="form-group" data-testid="form-group-name">
+                            <label for="name" data-testid="label-name">Full Name *</label>
+                            <input 
+                                type="text" 
+                                id="name" 
+                                name="name" 
+                                required 
+                                placeholder="Enter your full name"
+                                data-testid="input-name">
+                            <span class="form-error" id="nameError" data-testid="error-name">Please enter your name</span>
+                        </div>
+                        
+                        <div class="form-group" data-testid="form-group-email">
+                            <label for="email" data-testid="label-email">Email Address *</label>
+                            <input 
+                                type="email" 
+                                id="email" 
+                                name="email" 
+                                required 
+                                placeholder="your.email@example.com"
+                                data-testid="input-email">
+                            <span class="form-error" id="emailError" data-testid="error-email">Please enter a valid email</span>
+                        </div>
+                        
+                        <div class="form-group" data-testid="form-group-car">
+                            <label for="carModel" data-testid="label-car-model">Car Model Interested In *</label>
+                            <select 
+                                id="carModel" 
+                                name="carModel" 
+                                required
+                                data-testid="input-car-model">
+                                <option value="" data-testid="option-default">Select a car model</option>
+                                <option value="BMW 3 Series" data-testid="option-bmw">BMW 3 Series</option>
+                                <option value="Toyota Corolla" data-testid="option-toyota">Toyota Corolla</option>
+                                <option value="Ford Ranger" data-testid="option-ford">Ford Ranger</option>
+                                <option value="VW Golf GTI" data-testid="option-vw">VW Golf GTI</option>
+                                <option value="Mercedes-Benz C-Class" data-testid="option-mercedes">Mercedes-Benz C-Class</option>
+                                <option value="Audi A4" data-testid="option-audi">Audi A4</option>
+                                <option value="Other" data-testid="option-other">Other</option>
+                            </select>
+                            <span class="form-error" id="carModelError" data-testid="error-car-model">Please select a car model</span>
+                        </div>
+                        
+                        <div class="form-group" data-testid="form-group-message">
+                            <label for="message" data-testid="label-message">Message *</label>
+                            <textarea 
+                                id="message" 
+                                name="message" 
+                                required 
+                                placeholder="Tell us more about your requirements..."
+                                data-testid="input-message"></textarea>
+                            <span class="form-error" id="messageError" data-testid="error-message">Please enter your message</span>
+                        </div>
+                        
+                        <button type="submit" class="submit-btn" data-testid="button-submit">
+                            <i class="fas fa-paper-plane"></i> Send Inquiry
+                        </button>
+                    </form>
+                    
+                    <div class="success-message" id="successMessage" data-testid="message-success">
+                        <i class="fas fa-check-circle"></i> Thank you! Our sales team will contact you soon.
+                    </div>
+                </div>
+                
+                <!-- Google Map -->
+                <div class="map-container" data-testid="map-container">
+                    <iframe 
+                        src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3583.3348447436985!2d28.053480315074!3d-26.107784183473!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x1e950c68f0406a51%3A0x238ac9d9b1d34041!2sSandton%20City!5e0!3m2!1sen!2sza!4v1642079647892!5m2!1sen!2sza"
+                        allowfullscreen="" 
+                        loading="lazy"
+                        title="AutoDrive SA Location"
+                        data-testid="iframe-map">
+                    </iframe>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Contact Info Cards -->
+    <section class="contact-info" style="background: var(--black); padding: 5rem 0;">
+        <div class="container">
+            <div class="section-title">
+                <h2 data-testid="text-info-title">Contact Information</h2>
+                <p data-testid="text-info-subtitle">Reach out to us through any of these channels</p>
+            </div>
+            
+            <div class="info-cards" data-testid="info-cards">
+                <div class="info-card" data-testid="card-info-1">
+                    <i class="fas fa-map-marker-alt" data-testid="icon-location"></i>
+                    <h3 data-testid="text-info-title-1">Visit Us</h3>
+                    <p data-testid="text-info-content-1">
+                        123 Nelson Mandela Square<br>
+                        Sandton, Johannesburg<br>
+                        2196, South Africa
+                    </p>
+                </div>
+                
+                <div class="info-card" data-testid="card-info-2">
+                    <i class="fas fa-phone" data-testid="icon-phone"></i>
+                    <h3 data-testid="text-info-title-2">Call Us</h3>
+                    <p data-testid="text-info-content-2">
+                        +27 11 123 4567<br>
+                        Mon - Fri: 8:00 AM - 6:00 PM<br>
+                        Sat: 9:00 AM - 4:00 PM
+                    </p>
+                </div>
+                
+                <div class="info-card" data-testid="card-info-3">
+                    <i class="fas fa-envelope" data-testid="icon-email"></i>
+                    <h3 data-testid="text-info-title-3">Email Us</h3>
+                    <p data-testid="text-info-content-3">
+                        info@autodrivesa.co.za<br>
+                        sales@autodrivesa.co.za<br>
+                        support@autodrivesa.co.za
+                    </p>
+                </div>
+            </div>
+            
+            <!-- Social Links -->
+            <div class="social-links" data-testid="social-links">
+                <a href="https://www.facebook.com/" target="_blank" class="social-btn" data-testid="link-social-facebook">
+                    <i class="fab fa-facebook-f"></i> Facebook
+                </a>
+                <a href="https://www.instagram.com/" target="_blank" class="social-btn" data-testid="link-social-instagram">
+                    <i class="fab fa-instagram"></i> Instagram
+                </a>
+                <a href="https://wa.me/27111234567" target="_blank" class="social-btn" data-testid="link-social-whatsapp">
+                    <i class="fab fa-whatsapp"></i> WhatsApp
+                </a>
+            </div>
+        </div>
+    </section>
+
+    <!-- Footer -->
+    <footer>
+        <div class="container">
+            <div class="footer-content">
+                <div class="footer-section" data-testid="footer-company">
+                    <h3 data-testid="text-footer-company-title">AutoDrive SA</h3>
+                    <p data-testid="text-footer-company-info">
+                        <i class="fas fa-map-marker-alt"></i> 123 Nelson Mandela Square<br>
+                        Sandton, Johannesburg, 2196<br>
+                        <i class="fas fa-phone"></i> +27 11 123 4567<br>
+                        <i class="fas fa-envelope"></i> info@autodrivesa.co.za
+                    </p>
+                </div>
+                
+                <div class="footer-section" data-testid="footer-links">
+                    <h3 data-testid="text-footer-links-title">Quick Links</h3>
+                    <ul class="footer-links">
+                        <li><a href="https://www.autotrader.co.za/" target="_blank" data-testid="link-footer-autotrader">AutoTrader SA</a></li>
+                        <li><a href="https://www.cars.co.za/" target="_blank" data-testid="link-footer-cars">Cars.co.za</a></li>
+                        <li><a href="https://www.carmag.co.za/" target="_blank" data-testid="link-footer-carmag">CarMag.co.za</a></li>
+                        <li><a href="https://www.youtube.com/" target="_blank" data-testid="link-footer-youtube">YouTube Channel</a></li>
+                    </ul>
+                </div>
+                
+                <div class="footer-section" data-testid="footer-social">
+                    <h3 data-testid="text-footer-social-title">Follow Us</h3>
+                    <div class="footer-socials">
+                        <a href="https://www.facebook.com/" target="_blank" class="social-icon" data-testid="link-social-footer-facebook">
+                            <i class="fab fa-facebook-f"></i>
+                        </a>
+                        <a href="https://www.instagram.com/" target="_blank" class="social-icon" data-testid="link-social-footer-instagram">
+                            <i class="fab fa-instagram"></i>
+                        </a>
+                        <a href="https://www.tiktok.com/" target="_blank" class="social-icon" data-testid="link-social-footer-tiktok">
+                            <i class="fab fa-tiktok"></i>
+                        </a>
+                        <a href="https://www.twitter.com/" target="_blank" class="social-icon" data-testid="link-social-footer-twitter">
+                            <i class="fab fa-twitter"></i>
+                        </a>
+                    </div>
+                </div>
+            </div>
+            
+            <div class="footer-bottom">
+                <p data-testid="text-footer-copyright">© 2025 AutoDrive SA | Designed by V. Chauke | All Rights Reserved</p>
+            </div>
+        </div>
+    </footer>
+
+    <script src="../js/main.js"></script>
+</body>
+</html>
