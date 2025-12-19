@@ -1,0 +1,574 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta
+      name="description"
+      content="AutoDrive SA - Find Your Perfect Ride. New & Used Cars You Can Trust. Premium car dealership in South Africa offering BMW, Toyota, Ford, VW, and more."
+    />
+    <meta
+      name="keywords"
+      content="cars, South Africa, BMW, Toyota, Ford, car dealership, used cars, new cars"
+    />
+    <title>AutoDrive SA - Find Your Perfect Ride</title>
+    <link rel="stylesheet" href="css/styles.css" />
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css"
+    />
+  </head>
+  <body>
+    <!-- Navigation -->
+    <nav class="navbar">
+      <div class="container">
+        <div class="nav-content">
+          <a href="index.html" class="logo" data-testid="link-logo"
+            >AUTO<span>DRIVE</span> SA</a
+          >
+          <ul class="nav-menu" id="navMenu" data-testid="nav-menu">
+            <li>
+              <a href="index.html" class="active" data-testid="link-home"
+                >Home</a
+              >
+            </li>
+            <li>
+              <a href="pages/about.html" data-testid="link-about">About Us</a>
+            </li>
+            <li>
+              <a href="pages/contact.html" data-testid="link-contact"
+                >Contact</a
+              >
+            </li>
+          </ul>
+          <div class="hamburger" id="hamburger" data-testid="button-hamburger">
+            <span></span>
+            <span></span>
+            <span></span>
+          </div>
+        </div>
+      </div>
+    </nav>
+
+    <!-- Hero Section -->
+    <section class="hero" id="hero">
+      <img
+        src="https://images.unsplash.com/photo-1503376780353-7e6692767b70?w=1920&h=1080&fit=crop"
+        alt="Sports car on highway"
+        class="hero-bg"
+        data-testid="img-hero-bg"
+      />
+      <div class="hero-content">
+        <h1 data-testid="text-hero-title">
+          Find Your <span class="highlight">Perfect Ride</span>
+        </h1>
+        <p data-testid="text-hero-subtitle">New & Used Cars You Can Trust</p>
+        <a
+          href="#featured-cars"
+          class="cta-button"
+          data-testid="button-view-cars"
+          >View Cars</a
+        >
+      </div>
+      <div class="scroll-indicator">
+        <span></span>
+      </div>
+    </section>
+
+    <!-- Car Slider Section -->
+    <section class="car-slider" id="car-categories">
+      <div class="container">
+        <div class="section-title">
+          <h2 data-testid="text-categories-title">Explore Our Categories</h2>
+          <p data-testid="text-categories-subtitle">
+            From luxury sedans to powerful SUVs, find the perfect car for your
+            lifestyle
+          </p>
+        </div>
+
+        <div class="slider-container">
+          <div
+            class="slider-wrapper"
+            id="sliderWrapper"
+            data-testid="slider-wrapper"
+          >
+            <div class="slide" data-testid="slide-1">
+              <img
+                src="https://images.unsplash.com/photo-1555215695-3004980ad54e?w=1200&h=600&fit=crop"
+                alt="Luxury Cars"
+              />
+              <div class="slide-caption">
+                <h3 data-testid="text-slide-title-1">Luxury</h3>
+                <p data-testid="text-slide-desc-1">
+                  Experience premium comfort and cutting-edge technology
+                </p>
+              </div>
+            </div>
+            <div class="slide" data-testid="slide-2">
+              <img
+                src="https://images.unsplash.com/photo-1580273916550-e323be2ae537?w=1200&h=600&fit=crop"
+                alt="Affordable Cars"
+              />
+              <div class="slide-caption">
+                <h3 data-testid="text-slide-title-2">Affordable</h3>
+                <p data-testid="text-slide-desc-2">
+                  Quality vehicles that fit your budget perfectly
+                </p>
+              </div>
+            </div>
+            <div class="slide" data-testid="slide-3">
+              <img src="./images/polovivo.png" alt="Fuel Efficient Cars" />
+              <div class="slide-caption">
+                <h3 data-testid="text-slide-title-3">Fuel Efficient</h3>
+                <p data-testid="text-slide-desc-3">
+                  Save money with our eco-friendly vehicle options
+                </p>
+              </div>
+            </div>
+            <div class="slide" data-testid="slide-4">
+              <img src="./images/suv and truck.png" alt="SUVs and Trucks" />
+              <div class="slide-caption">
+                <h3 data-testid="text-slide-title-4">SUVs & Trucks</h3>
+                <p data-testid="text-slide-desc-4">
+                  Power and versatility for every adventure
+                </p>
+              </div>
+            </div>
+            <div class="slide" data-testid="slide-5">
+              <img
+                src="https://images.unsplash.com/photo-1553440569-bcc63803a83d?w=1200&h=600&fit=crop"
+                alt="Premium Cars"
+              />
+              <div class="slide-caption">
+                <h3 data-testid="text-slide-title-5">Premium Selection</h3>
+                <p data-testid="text-slide-desc-5">
+                  Handpicked vehicles for discerning drivers
+                </p>
+              </div>
+            </div>
+          </div>
+
+          <div class="slider-controls">
+            <button
+              class="slider-btn"
+              id="prevBtn"
+              data-testid="button-slider-prev"
+            >
+              <i class="fas fa-chevron-left"></i>
+            </button>
+            <button
+              class="slider-btn"
+              id="nextBtn"
+              data-testid="button-slider-next"
+            >
+              <i class="fas fa-chevron-right"></i>
+            </button>
+          </div>
+        </div>
+
+        <div
+          class="slider-dots"
+          id="sliderDots"
+          data-testid="slider-dots"
+        ></div>
+      </div>
+    </section>
+
+    <!-- Featured Cars Section -->
+    <section class="featured-cars" id="featured-cars">
+      <div class="container">
+        <div class="section-title">
+          <h2 data-testid="text-featured-title">Featured Vehicles</h2>
+          <p data-testid="text-featured-subtitle">
+            Handpicked selection of premium vehicles available now
+          </p>
+        </div>
+
+        <div class="cars-grid" data-testid="cars-grid">
+          <div class="car-card" data-testid="card-car-1">
+            <img
+              src="./images/bmw 3 series.png"
+              alt="BMW 3 Series 2023"
+              class="car-image"
+              data-testid="img-car-1"
+            />
+            <div class="car-info">
+              <h3 data-testid="text-car-name-1">BMW 3 Series 2025</h3>
+              <p class="car-price" data-testid="text-car-price-1">R909,990</p>
+              <div class="car-details">
+                <span class="car-detail-item" data-testid="text-car-year-1">
+                  <i class="fas fa-calendar"></i> 2025
+                </span>
+                <span class="car-detail-item" data-testid="text-car-mileage-1">
+                  <i class="fas fa-tachometer-alt"></i> 20,000 km
+                </span>
+                <span class="car-detail-item" data-testid="text-car-fuel-1">
+                  <i class="fas fa-gas-pump"></i> Petrol
+                </span>
+              </div>
+              <a
+                href="https://www.autotrader.co.za/car-for-sale/bmw/3-series/320i/28106935?vf=3&db=1&s360=0&so=1&pl=0&pr=3&po=1&pq=0&sp=4#&gid=1&pid=1"
+                target="_blank"
+                class="view-details-btn"
+                data-testid="button-view-details-1"
+                >View Details</a
+              >
+            </div>
+          </div>
+
+          <div class="car-card" data-testid="card-car-2">
+            <img
+              src="./images/toyota corolla.png"
+              alt="Toyota Corolla 2022"
+              class="car-image"
+              data-testid="img-car-2"
+            />
+            <div class="car-info">
+              <h3 data-testid="text-car-name-2">Toyota Corolla 2019</h3>
+              <p class="car-price" data-testid="text-car-price-2">R234,900</p>
+              <div class="car-details">
+                <span class="car-detail-item" data-testid="text-car-year-2">
+                  <i class="fas fa-calendar"></i> 2019
+                </span>
+                <span class="car-detail-item" data-testid="text-car-mileage-2">
+                  <i class="fas fa-tachometer-alt"></i> 67,500 km
+                </span>
+                <span class="car-detail-item" data-testid="text-car-fuel-2">
+                  <i class="fas fa-gas-pump"></i> Petrol
+                </span>
+              </div>
+              <a
+                href="https://www.autotrader.co.za/car-for-sale/toyota/corolla/esteem/28314731?vf=1&db=1&s360=0&so=1&pl=0&pr=2&po=1&pq=0&sp=5#&gid=1&pid=1"
+                target="_blank"
+                class="view-details-btn"
+                data-testid="button-view-details-2"
+                >View Details</a
+              >
+            </div>
+          </div>
+
+          <div class="car-card" data-testid="card-car-3">
+            <img
+              src="./images/ford ranger.png"
+              alt="Ford Ranger 2023"
+              class="car-image"
+              data-testid="img-car-3"
+            />
+            <div class="car-info">
+              <h3 data-testid="text-car-name-3">Ford Ranger 2023</h3>
+              <p class="car-price" data-testid="text-car-price-3">R689,000</p>
+              <div class="car-details">
+                <span class="car-detail-item" data-testid="text-car-year-3">
+                  <i class="fas fa-calendar"></i> 2023
+                </span>
+                <span class="car-detail-item" data-testid="text-car-mileage-3">
+                  <i class="fas fa-tachometer-alt"></i> 35,451 km
+                </span>
+                <span class="car-detail-item" data-testid="text-car-fuel-3">
+                  <i class="fas fa-gas-pump"></i> Diesel
+                </span>
+              </div>
+              <a
+                href="https://www.autotrader.co.za/car-for-sale/ford/ranger/wildtrak/28339138?vf=2&db=1&s360=0&so=1&pl=1&pr=2&po=1&pq=0&sp=6#&gid=1&pid=1"
+                target="_blank"
+                class="view-details-btn"
+                data-testid="button-view-details-3"
+                >View Details</a
+              >
+            </div>
+          </div>
+
+          <div class="car-card" data-testid="card-car-4">
+            <img
+              src="./images/golf gti.png"
+              alt="VW Golf GTI 2023"
+              class="car-image"
+              data-testid="img-car-4"
+            />
+            <div class="car-info">
+              <h3 data-testid="text-car-name-4">VW Golf GTI 2023</h3>
+              <p class="car-price" data-testid="text-car-price-4">R739,950</p>
+              <div class="car-details">
+                <span class="car-detail-item" data-testid="text-car-year-4">
+                  <i class="fas fa-calendar"></i> 2023
+                </span>
+                <span class="car-detail-item" data-testid="text-car-mileage-4">
+                  <i class="fas fa-tachometer-alt"></i> 18,298 km
+                </span>
+                <span class="car-detail-item" data-testid="text-car-fuel-4">
+                  <i class="fas fa-gas-pump"></i> Petrol
+                </span>
+              </div>
+              <a
+                href="https://www.autotrader.co.za/car-for-sale/volkswagen/golf/gti/28329745?vf=1&db=1&s360=0&so=1&pl=0&pr=3&po=1&pq=0&sp=4#&gid=1&pid=1"
+                target="_blank"
+                class="view-details-btn"
+                data-testid="button-view-details-4"
+                >View Details</a
+              >
+            </div>
+          </div>
+
+          <div class="car-card" data-testid="card-car-5">
+            <img
+              src="./images/benz c-class.png"
+              alt="Mercedes-Benz C-Class 2022"
+              class="car-image"
+              data-testid="img-car-5"
+            />
+            <div class="car-info">
+              <h3 data-testid="text-car-name-5">Mercedes-Benz C-Class 2022</h3>
+              <p class="car-price" data-testid="text-car-price-5">R579,900</p>
+              <div class="car-details">
+                <span class="car-detail-item" data-testid="text-car-year-5">
+                  <i class="fas fa-calendar"></i> 2022
+                </span>
+                <span class="car-detail-item" data-testid="text-car-mileage-5">
+                  <i class="fas fa-tachometer-alt"></i> 93,000 km
+                </span>
+                <span class="car-detail-item" data-testid="text-car-fuel-5">
+                  <i class="fas fa-gas-pump"></i> Petrol
+                </span>
+              </div>
+              <a
+                href="https://www.autotrader.co.za/car-for-sale/mercedes-benz/c-class/c200/28336424?vf=3&db=1&s360=0&so=1&pl=0&pr=3&po=1&pq=0&sp=5#&gid=1&pid=4"
+                target="_blank"
+                class="view-details-btn"
+                data-testid="button-view-details-5"
+                >View Details</a
+              >
+            </div>
+          </div>
+
+          <div class="car-card" data-testid="card-car-6">
+            <img
+              src="./images/audi A4.png"
+              alt="Audi A4 2024"
+              class="car-image"
+              data-testid="img-car-6"
+            />
+            <div class="car-info">
+              <h3 data-testid="text-car-name-6">Audi A4 2024</h3>
+              <p class="car-price" data-testid="text-car-price-6">R649,900</p>
+              <div class="car-details">
+                <span class="car-detail-item" data-testid="text-car-year-6">
+                  <i class="fas fa-calendar"></i> 2024
+                </span>
+                <span class="car-detail-item" data-testid="text-car-mileage-6">
+                  <i class="fas fa-tachometer-alt"></i> 78,939 km
+                </span>
+                <span class="car-detail-item" data-testid="text-car-fuel-6">
+                  <i class="fas fa-gas-pump"></i> Petrol
+                </span>
+              </div>
+              <a
+                href="https://www.autotrader.co.za/car-for-sale/audi/a4/35tfsi/28270014?vf=3&db=1&s360=0&so=1&pl=1&pr=3&po=1&pq=0&sp=6#&gid=1&pid=1"
+                target="_blank"
+                class="view-details-btn"
+                data-testid="button-view-details-6"
+                >View Details</a
+              >
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- Video Section -->
+    <section class="video-section" id="video-reviews">
+      <div class="container">
+        <div class="section-title">
+          <h2 data-testid="text-video-title">Car Reviews & Insights</h2>
+          <p data-testid="text-video-subtitle">
+            Expert reviews to help you make the best decision
+          </p>
+        </div>
+
+        <div class="video-container" data-testid="video-container">
+          <iframe
+            width="560"
+            height="315"
+            src="https://www.youtube-nocookie.com/embed/EH8ACLjQ6dQ?si=A_rBuZbMPD0LoPGe"
+            title="YouTube video player"
+            frameborder="0"
+            allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"
+            referrerpolicy="strict-origin-when-cross-origin"
+            allowfullscreen
+          ></iframe>
+        </div>
+      </div>
+    </section>
+
+    <!-- Testimonials Section -->
+    <section class="testimonials" id="testimonials">
+      <div class="container">
+        <div class="section-title">
+          <h2 data-testid="text-testimonials-title">What Our Customers Say</h2>
+          <p data-testid="text-testimonials-subtitle">
+            Real experiences from real people
+          </p>
+        </div>
+
+        <div class="testimonial-slider" data-testid="testimonial-slider">
+          <div class="testimonial active" data-testid="testimonial-1">
+            <p
+              class="testimonial-content"
+              data-testid="text-testimonial-content-1"
+            >
+              "I bought my dream car through AutoDrive SA - smooth and easy
+              process! The team was professional and helped me find exactly what
+              I was looking for within my budget."
+            </p>
+            <p
+              class="testimonial-author"
+              data-testid="text-testimonial-author-1"
+            >
+              — Thabo Molefe, Johannesburg
+            </p>
+          </div>
+
+          <div class="testimonial" data-testid="testimonial-2">
+            <p
+              class="testimonial-content"
+              data-testid="text-testimonial-content-2"
+            >
+              "Outstanding service! They connected me with a reliable dealership
+              and the whole experience was transparent. I'm driving my new BMW
+              and couldn't be happier!"
+            </p>
+            <p
+              class="testimonial-author"
+              data-testid="text-testimonial-author-2"
+            >
+              — Sarah van der Merwe, Cape Town
+            </p>
+          </div>
+
+          <div class="testimonial" data-testid="testimonial-3">
+            <p
+              class="testimonial-content"
+              data-testid="text-testimonial-content-3"
+            >
+              "Best car buying experience ever! AutoDrive SA made everything
+              simple and stress-free. Highly recommend to anyone looking for
+              quality vehicles."
+            </p>
+            <p
+              class="testimonial-author"
+              data-testid="text-testimonial-author-3"
+            >
+              — Sipho Ndlovu, Durban
+            </p>
+          </div>
+        </div>
+
+        <div
+          class="slider-dots"
+          id="testimonialDots"
+          data-testid="testimonial-dots"
+        ></div>
+      </div>
+    </section>
+
+    <!-- Footer -->
+    <footer>
+      <div class="container">
+        <div class="footer-content">
+          <div class="footer-section" data-testid="footer-company">
+            <h3 data-testid="text-footer-company-title">AutoDrive SA</h3>
+            <p data-testid="text-footer-company-info">
+              <i class="fas fa-map-marker-alt"></i> 123 Nelson Mandela Square<br />
+              Sandton, Johannesburg, 2196<br />
+              <i class="fas fa-phone"></i> +27 11 123 4567<br />
+              <i class="fas fa-envelope"></i> info@autodrivesa.co.za
+            </p>
+          </div>
+
+          <div class="footer-section" data-testid="footer-links">
+            <h3 data-testid="text-footer-links-title">Quick Links</h3>
+            <ul class="footer-links">
+              <li>
+                <a
+                  href="https://www.autotrader.co.za/"
+                  target="_blank"
+                  data-testid="link-footer-autotrader"
+                  >AutoTrader SA</a
+                >
+              </li>
+              <li>
+                <a
+                  href="https://www.cars.co.za/"
+                  target="_blank"
+                  data-testid="link-footer-cars"
+                  >Cars.co.za</a
+                >
+              </li>
+              <li>
+                <a
+                  href="https://www.carmag.co.za/"
+                  target="_blank"
+                  data-testid="link-footer-carmag"
+                  >CarMag.co.za</a
+                >
+              </li>
+              <li>
+                <a
+                  href="https://www.youtube.com/"
+                  target="_blank"
+                  data-testid="link-footer-youtube"
+                  >YouTube Channel</a
+                >
+              </li>
+            </ul>
+          </div>
+
+          <div class="footer-section" data-testid="footer-social">
+            <h3 data-testid="text-footer-social-title">Follow Us</h3>
+            <div class="footer-socials">
+              <a
+                href="https://www.facebook.com/"
+                target="_blank"
+                class="social-icon"
+                data-testid="link-social-facebook"
+              >
+                <i class="fab fa-facebook-f"></i>
+              </a>
+              <a
+                href="https://www.instagram.com/"
+                target="_blank"
+                class="social-icon"
+                data-testid="link-social-instagram"
+              >
+                <i class="fab fa-instagram"></i>
+              </a>
+              <a
+                href="https://www.tiktok.com/"
+                target="_blank"
+                class="social-icon"
+                data-testid="link-social-tiktok"
+              >
+                <i class="fab fa-tiktok"></i>
+              </a>
+              <a
+                href="https://www.twitter.com/"
+                target="_blank"
+                class="social-icon"
+                data-testid="link-social-twitter"
+              >
+                <i class="fab fa-twitter"></i>
+              </a>
+            </div>
+          </div>
+        </div>
+
+        <div class="footer-bottom">
+          <p data-testid="text-footer-copyright">
+            © 2025 AutoDrive SA | Designed by V. Chauke | All Rights Reserved
+          </p>
+        </div>
+      </div>
+    </footer>
+
+    <script src="js/main.js"></script>
+  </body>
+</html>
