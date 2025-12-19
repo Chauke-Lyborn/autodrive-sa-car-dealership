@@ -9,7 +9,7 @@ This project was developed as part of my web development portfolio to demonstrat
 strong frontend development skills, clean UI/UX design, and responsive layouts.
 
 ## Live Demo
-[View Live Website](https://yourusername.github.io/autodrive-sa-car-dealership/)
+[View Live Website](https://chauke-lyborn.github.io/autodrive-sa-car-dealership/)
 
 ---
 
